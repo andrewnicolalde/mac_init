@@ -8,6 +8,8 @@ defaults write com.apple.screencapture disable-shadow -bool true # No shadows on
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true # Don't offer to make every new backup disk a TimeMachine backup drive
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 
 # Others
 sudo nvram SystemAudioVolume=" " # Silence boot chime (annoys coworkers)
