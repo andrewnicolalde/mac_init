@@ -6,8 +6,13 @@ defaults write com.apple.Dock size-immutable -bool true; killall Dock # Prevent 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false # Enable key repeat on VSCode (otherwise holding a key down suggests alternate characters)
 defaults write com.apple.screencapture disable-shadow -bool true # No shadows on window screenshots
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true # Don't offer to make every new backup disk a TimeMachine backup drive
+
+# Disable animations
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 
