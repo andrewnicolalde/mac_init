@@ -15,6 +15,9 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Disable / adjust other annoying things I don't like
+defaults write -g NSConvolutionOverride1 -float 10 # Make window corners smaller than the default.
+
 
 # Others
 sudo nvram SystemAudioVolume=" " # Silence boot chime (annoys coworkers)
